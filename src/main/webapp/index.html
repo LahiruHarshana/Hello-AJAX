@@ -14,7 +14,9 @@
 <script>
     $('#btn').click(function () {
         let xhr = new XMLHttpRequest();
+        console.log(xhr.readyState,"After Creating Object");
 
+        xhr.open("get","data/data.json");
     });
 
 </script>
