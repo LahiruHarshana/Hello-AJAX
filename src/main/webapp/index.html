@@ -10,6 +10,7 @@
 <button id="btn">Click Me</button>
 <button id="btn2">Click Me 2</button>
 <h1 id="nm"></h1>
+<h1 id="ha"></h1>
 <script src="assets/bootstrap/js/jquery-3.7.1.min.js"></script>
 
 <script>
@@ -27,8 +28,6 @@
                 $('#nm').html(xhr.responseText);
             }
         });
-
-
     });
 
 
@@ -38,7 +37,8 @@
             method:"GET",
             success:function (data) {
                 console.log(data);
-                $('#nm').html(data.name);
+                $('#ha').html(data);
+                $('#ha').html("<h1>"+data.name+"</h1>");
             }
         })
     });
