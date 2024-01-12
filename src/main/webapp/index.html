@@ -21,15 +21,13 @@
 
         xhr.addEventListener("readystatechange",function () {
             console.log(xhr.readyState,"Inside the readystatechange event");
-            if(xhr.readyState === 4){
+            if(xhr.readyState === 4 && xhr.status === 200){
                 console.log(xhr.responseText,"Response Text");
             }
         });
 
         xhr.send();
         console.log(xhr.readyState,"After sending the request");
-
-
     });
 
 </script>
