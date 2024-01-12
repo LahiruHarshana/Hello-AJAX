@@ -8,6 +8,7 @@
 <h1>Hello Ajax</h1>
 <p>Let's implement AJAX with XMLHttpRequest Object</p>
 <button id="btn">Click Me</button>
+<button id="btn2">Click Me 2</button>
 <h1 id="nm"></h1>
 <script src="assets/bootstrap/js/jquery-3.7.1.min.js"></script>
 
@@ -27,8 +28,19 @@
             }
         });
 
-        xhr.send();
-        console.log(xhr.readyState,"After sending the request");
+
+    });
+
+
+    $("#btn2").click(function () {
+        $.ajax({
+            url:"data/data.json",
+            method:"GET",
+            success:function (data) {
+                console.log(data);
+                $('#nm').html(data.name);
+            }
+        })
     });
 
 </script>
