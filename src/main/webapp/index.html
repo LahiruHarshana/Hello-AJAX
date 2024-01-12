@@ -19,18 +19,14 @@
         xhr.open("get","data/data.json");
         console.log(xhr.readyState,"After opening the request");
 
+
+
         xhr.send();
         console.log(xhr.readyState,"After sending the request");
 
-        console.log(xhr.responseText,"Response Text");
 
 
-        xhr.addEventListener("readystatechange",function () {
-            console.log(xhr.readyState,"Inside the readystatechange event");
-            if(xhr.readyState === 4){
-                console.log(xhr.responseText,"Response Text");
-            }
-        });
+
     });
 
 </script>
