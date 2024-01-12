@@ -25,7 +25,12 @@
         console.log(xhr.responseText,"Response Text");
 
 
-        xhr.addEventListener()
+        xhr.addEventListener("readystatechange",function () {
+            console.log(xhr.readyState,"Inside the readystatechange event");
+            if(xhr.readyState === 4){
+                console.log(xhr.responseText,"Response Text");
+            }
+        });
     });
 
 </script>
